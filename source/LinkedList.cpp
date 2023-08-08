@@ -12,7 +12,7 @@ void LinkedList::initVariables() {
 
 LinkedList::~LinkedList() { // destructor
 	Node* current = this->_head;
-	cout << "Destructor::Deleted element: ";
+	cout << "\n\nDestructor::Deleted element: ";
 
 	while (current != nullptr) {
 		Node* temp = current;
@@ -36,14 +36,16 @@ void LinkedList::addValue(int value) {
 		++this->_countNode; // Increment the count of Nodes
 
 		return;
+
 	} 
 	this->_head = newNode; // if nullptr, he take the newNode adress
 	++this->_countNode; // Increment the count of Nodes
 }
 
 void LinkedList::printLinkedList() const {
-	if (this->_countNode <= 0) { cout << "Empty List" << endl; }
+	if (this->_countNode <= 0) { cout << "\nEmpty List" << endl; }
 	else {
+		cout << "\n" << endl;
 		Node* tempAdress = this->_head;
 		unsigned int countBuffer(0);
 
